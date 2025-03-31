@@ -7,13 +7,13 @@
 ## Instalação 
 
 ```bash
-npm install scget
+npm install @lmonly/scget
 ```
 
 ## Exemplo de uso
 
 ```Javascript
-const scget = require('scget');
+const scget = require('@lmonly/scget');
 
 async function main() {
     const body = await scget('https://example.com', {

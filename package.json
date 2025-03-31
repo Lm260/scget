@@ -1,5 +1,5 @@
 {
-  "name": "scget",
+  "name": "@lmonly/scget",
   "version": "1.0.0",
   "description": "Requisição simples usando curl para nodeJS.",
   "main": "scget.js",
