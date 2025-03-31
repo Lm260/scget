@@ -20,7 +20,7 @@ function setHeaders(headers) {
     const params = [];
 
     Object.keys(headers).forEach(key => {
-        params.push('-H', headers[key]);
+        params.push('-H', `${key}: ${headers[key]}`);
     });
 
     return params;
