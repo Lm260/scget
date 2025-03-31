@@ -2,9 +2,9 @@
 
 **Requisição simples com curl usando nodeJS**
 
-## Exemplo de uso
+> Projeto destinado a oferecer rapidez, simplicidade e baixo consumo de recursos. Excelente para requests rápidos.
 
-**text**
+## Exemplo de uso
 
 ```Javascript
 const scget = require('scget');
