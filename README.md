@@ -2,22 +2,37 @@
 
 **Requisição simples com curl usando nodeJS**
 
-```Example
+## Exemplo de uso
+
+**text**
+
+```Javascript
 const scget = require('scget');
 
 async function main() {
-    const body = await scget('https://example.com');
+    const body = await scget('https://example.com', {
+        method: 'GET',
+        headers: {
+            'User-Agent': 'Mozila/5.0'
+        },
+        //data: params //Somente para POST
+    });
     
     if (!body.success) {
         console.log('Falha!');
         process.exit();
     }
     
-    console.log(body.data);
+    console.log(body.data); //Para json => body.json();
 }
 
 main();
 ```
+
+## Features
+
+ - **Options** method, headers e data
+ - **Returns** text, json e buffer ( concat )
 
 ## Aviso
  
