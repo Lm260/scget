@@ -4,6 +4,12 @@
 
 > Projeto destinado a oferecer rapidez, simplicidade e baixo consumo de recursos. Excelente para requests rápidos.
 
+## Instalação 
+
+```bash
+npm install scget
+```
+
 ## Exemplo de uso
 
 ```Javascript
