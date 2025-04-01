@@ -21,7 +21,8 @@ async function main() {
         headers: {
             'User-Agent': 'Mozila/5.0'
         },
-        //data: params //Somente para POST
+        //data: params, //Somente para POST
+        redirects: true //Permitir Redirecionamento ( statuscode 300... )
     });
     
     if (!body.success) {
@@ -37,7 +38,7 @@ main();
 
 ## Features
 
- - **Options** method, headers e data
+ - **Options** method, headers, data & redirects
  - **Returns** text, json e buffer ( concat )
 
 ## Aviso

@@ -81,6 +81,10 @@ function SCGET_URL(url, options = {}) {
     }
 
     const params = ['-X', options.method];
+    
+    if (options.redirects) {
+        params.push('-L');
+    }
 
     if (options.method === 'POST') {
         if (!options.data) {
