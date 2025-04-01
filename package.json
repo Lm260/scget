@@ -1,6 +1,6 @@
 {
   "name": "@lmonly/scget",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Requisição simples usando curl para nodeJS.",
   "main": "scget.js",
   "scripts": {
@@ -8,6 +8,9 @@
   },
   "author": "Lm Only",
   "license": "MIT",
+  "contributors": [
+    "Nkzin Alone"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Lm260/scget.git"

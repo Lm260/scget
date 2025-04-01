@@ -2,8 +2,8 @@
 
 const { spawn } = require('node:child_process');
 
-function setPostData(isJsonContent, data) {
-    if (typeof data !== 'object' || isJsonContent) {
+function setPostData(data) {
+    if (typeof data !== 'object') {
         return ['-d', data];
     }
 
@@ -61,18 +61,6 @@ function curl_request(params) {
     });
 }
 
-function HcheckJSON(headers = {}) {
-    let param = 0;
-    
-    Object.keys(headers).forEach(key => {
-        if (key.toLowerCase() === 'content-type') {
-            param = Boolean(headers[key] === 'application/json');
-        }
-    });
-            
-    return param;
-}
-
 function SCGET_URL(url, options = {}) {
     options.method = (options.method || 'GET').toUpperCase();
     
@@ -92,8 +80,7 @@ function SCGET_URL(url, options = {}) {
                 ' "data"');
         }
 
-        const isJsonContent = HcheckJSON(options.headers);
-        params.push(...setPostData(isJsonContent, options.data));
+        params.push(...setPostData(options.data));
     }
 
     if (options.headers) {
