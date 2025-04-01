@@ -10,7 +10,7 @@ function setPostData(isJsonContent, data) {
     const params = [];
     
     Object.keys(data).forEach(key => {
-        params.push('-d', data[key]);
+        params.push('-d', `${key}=${data[key]}`);
     });
 
     return params;
